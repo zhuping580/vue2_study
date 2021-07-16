@@ -18,6 +18,16 @@ export default {
       default: false,
     },
   },
+  watch: {
+    show: {
+      immediate: true,
+      handler(newValue) {
+        if (newValue === true) {
+          setTimeout(() => {this.$emit('update:show', false)}, 2000) 
+        }
+      }
+    }
+  }
 };
 </script>
 

@@ -75,7 +75,15 @@ export default {
   
   methods: {
     addCourse() {
-      this.courses.find(this.courses => this.courses.name === this.cname)
+      let flag = false
+      this.courses.forEach(item => {
+        if (item.name === this.cname) { 
+          alert('已有数据不能重复添加')
+          flag = true
+          return
+          }
+        })
+      if (flag === true) { return }
       this.courses.push({ name: this.cname, price: this.price })
       this.show = true
     },

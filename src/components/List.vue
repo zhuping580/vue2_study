@@ -7,7 +7,7 @@
       <li v-for="c in courses" 
       :key="c.name"
       :class="{active: (selectedCourse === c)}"
-      @click="selectedCourse = c"
+      @click="onClick(c)"
       >
         {{ c.name }} - {{ c.price | currency('￥') }}
         <button @click="removeCourse(c)">删除</button>
@@ -65,6 +65,14 @@ export default {
     removeCourse(c) {
       console.log(c);
       this.$emit('removeC', c)
+    },
+    onClick(c) {
+      this.selectedCourse = c;
+      // this.$router.push(`/admin/course/${c.name}`)
+      this.$router.push({
+        name: "detail",
+        params: { name: c.name }
+      });
     }
   },
 }
