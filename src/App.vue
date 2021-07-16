@@ -1,12 +1,26 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <!-- <svg>
+        <use xlink:href="#icon-01" />
+      </svg> -->
+      <router-link to="/">
+        <svg-icon icon-class="01"></svg-icon>
+        Home</router-link
+      >
+      |
+      <router-link to="/about">
+        <svg-icon icon-class="02"></svg-icon>
+        About</router-link
+      >
     </div>
-    <router-view/>
+    <router-view />
   </div>
 </template>
+<script>
+// import '@/icons/svg/01.svg' 添加自动导入
+export default {};
+</script>
 
 <style>
 #app {

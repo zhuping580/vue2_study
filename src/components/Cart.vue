@@ -43,7 +43,7 @@ export default {
   },
   // 组件初始化完毕，各种数据可以使用，常用于异步数据获取
   async created() {
-    console.log('created', this.title);
+    console.log('created');
     // 组件实例已创建，由于未挂载，dom不存在
     const courses = await getCourses();
     this.courses = courses;

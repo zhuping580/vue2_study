@@ -7,7 +7,7 @@ import axios from 'axios'
 //     }, 2000);
 //   })
 // }
-
+// axios.defaults.timeout = 3000
 export function getCourses() {
   return axios.get('/api/courses').then(res => res.data)
 }
