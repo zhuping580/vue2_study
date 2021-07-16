@@ -1,19 +1,18 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <!-- <svg>
+    <!-- <svg>
         <use xlink:href="#icon-01" />
       </svg> -->
-      <router-link to="/">
-        <svg-icon icon-class="01"></svg-icon>
-        Home</router-link
-      >
-      |
+    <router-link to="/">
+      <!-- <svg-icon icon-class="01"></svg-icon>
+        Home -->
+    </router-link>
+    <!-- |
       <router-link to="/about">
         <svg-icon icon-class="02"></svg-icon>
         About</router-link
-      >
-    </div>
+      > -->
+
     <router-view />
   </div>
 </template>
@@ -32,7 +31,7 @@ export default {};
 }
 
 #nav {
-  padding: 30px;
+  width: 100%;
 }
 
 #nav a {
