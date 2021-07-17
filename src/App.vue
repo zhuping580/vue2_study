@@ -3,22 +3,22 @@
     <!-- <svg>
         <use xlink:href="#icon-01" />
       </svg> -->
-    <router-link to="/">
-      <!-- <svg-icon icon-class="01"></svg-icon>
-        Home -->
-    </router-link>
+    <Home></Home>
     <!-- |
       <router-link to="/about">
         <svg-icon icon-class="02"></svg-icon>
         About</router-link
       > -->
-
-    <router-view />
   </div>
 </template>
 <script>
 // import '@/icons/svg/01.svg' 添加自动导入
-export default {};
+import Home from '@/views/Home.vue';
+export default {
+  components: {
+    Home
+  }
+};
 </script>
 
 <style>
